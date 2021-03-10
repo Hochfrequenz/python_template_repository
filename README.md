@@ -26,7 +26,7 @@ has been created.
 If this is the case, clone this repository and create the `dev` environment on your maschine.
 
 ```bash
-tox -r dev
+tox -e dev
 ```
 
 ### How to use with PyCharm

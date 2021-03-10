@@ -8,4 +8,4 @@ class TestMyClass:
 
     def test_something(self):
         my_class = MyClass()
-        assert my_class.do_something() is True
+        assert my_class.do_something() == "foo"

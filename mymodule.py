@@ -12,11 +12,11 @@ class MyClass:  # pylint: disable=too-few-public-methods
         """
         Initialize for the sake of initializing
         """
-        pass
+        self.foo = "foo"
 
-    def do_something(self) -> bool:  # pylint: disable=no-self-use
+    def do_something(self) -> str:
         """
-        Actually does nothing
-        :return:
+        Actually does nothing.
+        :return: the value of foo
         """
-        return True
+        return self.foo

@@ -28,7 +28,7 @@ This introduction assumes that you have tox installed already (
 see [installation instructions](https://tox.readthedocs.io/en/latest/install.html)) and that a `.toxbase` environment
 has been created.
 
-If this is the case, clone this repository and create the `dev` environment on your maschine.
+If this is the case, clone this repository and create the `dev` environment on your machine.
 
 ```bash
 tox -e dev

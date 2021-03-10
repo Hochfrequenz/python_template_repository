@@ -1,14 +1,19 @@
-# python_repo_template
+# Python Template Repository including Unittests and Linting Actions
+<!--- you need to replace the `organization/repo_name` in the status badge URLs --->
+![Pytest status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Pytest/badge.svg)
+![Coverage status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Coverage/badge.svg)
+![Pylint status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Pylint/badge.svg)
+![Black status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Black/badge.svg)
 
-This is a template repository. It doesn't contain any actual code but only a basic setup for a Python project including:
+This is a template repository. It doesn't contain any useful code but only a minimal working setup for a Python project including:
 
-+ project structure with
++ a basic **project structure** with
     + tox.ini
     + requirements.in
     + and a requirements.txt derived from it
     + an example class
     + an example unit test (using pytest)
-+ separate Github Actions for
++ ready to use **Github Actions** for
     + [pytest](https://pytest.org)
     + [code coverage measurement](https://coverage.readthedocs.io) (fails below 80% by default)
     + [pylint](https://pylint.org/) (only accepts 10/10 code rating by default)
@@ -56,3 +61,6 @@ tox -e dev
     "python.linting.pylintEnabled": true
 ```
 4. Enjoy 🤗
+
+## Contribute
+You are very welcome to contribute to this template repository by opening a pull request against the main branch.

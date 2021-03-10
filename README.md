@@ -22,7 +22,7 @@ This is a template repository. It doesn't contain any useful code but only a min
 
 By default it uses Python version 3.9.
 
-## How to use this Repository on Your Maschine
+## How to use this Repository on Your Machine
 
 This introduction assumes that you have tox installed already (
 see [installation instructions](https://tox.readthedocs.io/en/latest/install.html)) and that a `.toxbase` environment

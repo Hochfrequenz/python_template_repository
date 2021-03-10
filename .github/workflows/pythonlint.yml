@@ -21,4 +21,4 @@ jobs:
           pip install tox
       - name: Run Pylint via Tox
         run: |
-          tox -e ${{ matrix.tox }}
+          tox -e linting

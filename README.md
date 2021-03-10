@@ -1,4 +1,4 @@
-# python_repo_template
+# Python Template Repository including Unittests and Linting Actions
 
 This is a template repository. It doesn't contain any actual code but only a basic setup for a Python project including:
 

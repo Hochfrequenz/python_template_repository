@@ -1,4 +1,4 @@
-from myclass import MyClass
+from mymodule import MyClass
 
 
 class TestMyClass:

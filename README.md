@@ -1,6 +1,6 @@
 # Python Template Repository including Unittests and Linting Actions
 
-This is a template repository. It doesn't contain any actual code but only a basic setup for a Python project including:
+This is a template repository. It doesn't contain any useful code but only a minimal working setup for a Python project including:
 
 + a basic **project structure** with
     + tox.ini
@@ -43,3 +43,7 @@ tox -e dev
 ### How to user with VS Code
 
 _please add docs here_
+
+
+## Contribute
+You are very welcome to contribute to this template repository by opening a pull request against the main branch.

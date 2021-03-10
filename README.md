@@ -2,13 +2,13 @@
 
 This is a template repository. It doesn't contain any actual code but only a basic setup for a Python project including:
 
-+ project structure with
++ a basic **project structure** with
     + tox.ini
     + requirements.in
     + and a requirements.txt derived from it
     + an example class
     + an example unit test (using pytest)
-+ separate Github Actions for
++ ready to use **Github Actions** for
     + [pytest](https://pytest.org)
     + [code coverage measurement](https://coverage.readthedocs.io) (fails below 80% by default)
     + [pylint](https://pylint.org/) (only accepts 10/10 code rating by default)

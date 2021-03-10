@@ -8,7 +8,6 @@ jobs:
       matrix:
         python-version: [3.9]
         os: [ubuntu-latest]
-        tox: [tests]
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}

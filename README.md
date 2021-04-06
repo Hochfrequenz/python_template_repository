@@ -1,4 +1,4 @@
-# Python Template Repository including Unittests, Linting Actions and Coverage measurements
+# Python Template Repository including Tox.ini, Unittests, Linting Actions and Coverage measurements
 <!--- you need to replace the `organization/repo_name` in the status badge URLs --->
 ![Unittests status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Unittests/badge.svg)
 ![Coverage status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Coverage/badge.svg)

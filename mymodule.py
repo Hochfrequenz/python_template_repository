@@ -19,4 +19,5 @@ class MyClass:  # pylint: disable=too-few-public-methods
         Actually does nothing.
         :return: the value of an instance variable
         """
+        # this is a super long line with: 100 < line length <= 120 to demonstrate the purpose of pyproject.toml
         return self.my_instance_var

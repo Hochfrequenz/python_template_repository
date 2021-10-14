@@ -3,7 +3,7 @@ name: "Linting"
 on: [push]
 jobs:
   pylint:
-    name: Linter and Type Checker
+    name: Python Code Quality and Lint
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:

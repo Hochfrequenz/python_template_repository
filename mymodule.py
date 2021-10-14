@@ -24,4 +24,7 @@ class MyClass:  # pylint: disable=too-few-public-methods
         return self.my_instance_var
 
     def do_somthing_else(self, argument: str) -> None:
+        """
+        This method prints the argument
+        """
         print(f"I'm doing something with '{argument}'...")

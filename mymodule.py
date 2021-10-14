@@ -1,6 +1,7 @@
 """
 This a docstring for the module.
 """
+from typing import Optional
 
 
 class MyClass:  # pylint: disable=too-few-public-methods
@@ -14,7 +15,7 @@ class MyClass:  # pylint: disable=too-few-public-methods
         """
         self.my_instance_var: str = "abc"
 
-    def do_something(self) -> str:
+    def do_something(self) -> Optional[list]:  # another wrong type hint for mypy to find
         """
         Actually does nothing.
         :return: the value of an instance variable

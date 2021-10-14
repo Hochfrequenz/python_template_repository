@@ -3,12 +3,13 @@ name: "Linting"
 on: [push]
 jobs:
   pylint:
-    name: Python Code Quality and Lint
+    name: Linter and Type Checker
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         python-version: [3.9]
         os: [ubuntu-latest]
+        linter-env: [linting, type_check]
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
@@ -21,4 +22,4 @@ jobs:
           pip install tox
       - name: Run Pylint via Tox
         run: |
-          tox -e linting
+          tox -e ${{ matrix.linter-env }}}

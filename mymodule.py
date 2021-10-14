@@ -14,16 +14,16 @@ class MyClass:  # pylint: disable=too-few-public-methods
         """
         self.my_instance_var: str = "abc"
 
-    def do_something(self) -> int:
+    def do_something(self) -> str:
         """
         Actually does nothing.
         :return: the value of an instance variable
         """
         # this is a super long line with: 100 < line length <= 120 to demonstrate the purpose of pyproject.toml
-        self.do_somthing_else(self.my_instance_var)
+        self.do_somthing_else(self.my_instance_var)  # something goes wrong here. let mypy find it
         return self.my_instance_var
 
-    def do_somthing_else(self, argument: str) -> None:
+    def do_somthing_else(self, argument: int) -> None:
         """
         This method prints the argument
         """

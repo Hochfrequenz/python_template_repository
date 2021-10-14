@@ -14,7 +14,7 @@ class MyClass:  # pylint: disable=too-few-public-methods
         """
         self.my_instance_var = "abc"
 
-    def do_something(self) -> str:
+    def do_something(self) -> int:
         """
         Actually does nothing.
         :return: the value of an instance variable

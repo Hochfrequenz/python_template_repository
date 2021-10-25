@@ -19,6 +19,7 @@ This is a template repository. It doesn't contain any useful code but only a min
   - [pytest](https://pytest.org)
   - [code coverage measurement](https://coverage.readthedocs.io) (fails below 80% by default)
   - [pylint](https://pylint.org/) (only accepts 10/10 code rating by default)
+  - [mypy](https://github.com/python/mypy) (static type checks where possible)
   - [black](https://github.com/psf/black) code formatter check
     using [lgeiger/black-action](https://github.com/lgeiger/black-action)
 

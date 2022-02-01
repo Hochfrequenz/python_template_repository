@@ -1,4 +1,4 @@
-# This GitHub workflow is only needed for python package releases.
+# This GitHub workflow is only needed for python package releases which are supposed to be published on pypi.
 
 
 # This workflows will upload a Python Package using Twine when a release is created

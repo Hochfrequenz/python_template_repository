@@ -7,3 +7,11 @@ profile = "black"
 
 [tool.pylint."MESSAGES CONTROL"]
 max-line-length = 120
+
+# the following lines are needed if you would like to build a python package
+# and you want to use semantic versioning
+# [build-system]
+# requires = ["setuptools>=41.0", "wheel", "setuptools_scm[toml]>=3.4"]
+# build-backend = "setuptools.build_meta"
+
+# [tool.setuptools_scm]

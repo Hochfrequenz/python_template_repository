@@ -12,7 +12,7 @@ class MyClass:  # pylint: disable=too-few-public-methods
         """
         Initialize for the sake of initializing
         """
-        self.my_instance_var: str = "abc"
+        self.my_instance_var: int = "xyz"
 
     def do_something(self) -> str:
         """

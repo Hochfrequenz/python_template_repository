@@ -7,7 +7,7 @@
 ![Linting status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Linting/badge.svg)
 ![Black status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Black/badge.svg)
 
-This is a template repository. It doesn't contain any useful code but only a minimal working setup for a Python (v3.10) project including:
+This is a template repository. It doesn't contain any useful code but only a minimal working setup for a Python project including:
 
 - a basic **project structure** with
   - tox.ini
@@ -23,7 +23,7 @@ This is a template repository. It doesn't contain any useful code but only a min
   - [black](https://github.com/psf/black) code formatter check
     using [lgeiger/black-action](https://github.com/lgeiger/black-action)
 
-By default it uses Python version 3.9.
+By default it uses Python version 3.10.
 
 ## How to use this Repository on Your Machine
 

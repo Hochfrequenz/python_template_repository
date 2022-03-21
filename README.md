@@ -7,7 +7,7 @@
 ![Linting status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Linting/badge.svg)
 ![Black status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Black/badge.svg)
 
-This is a template repository. It doesn't contain any useful code but only a minimal working setup for a Python project including:
+This is a template repository. It doesn't contain any useful code but only a minimal working setup for a Python (v3.10) project including:
 
 - a basic **project structure** with
   - tox.ini

@@ -44,9 +44,10 @@ tox -e dev
 2. Set the
    default [test runner of your project](https://www.jetbrains.com/help/pycharm/choosing-your-testing-framework.html) to
    pytest.
-3. Set
+3. Set the `src` directory as sources root (via right click, [docs](https://www.jetbrains.com/help/pycharm/content-root.html)).
+4. Set
    the [working directory of the unit tests](https://www.jetbrains.com/help/pycharm/creating-run-debug-configuration-for-tests.html)
-   to the project root (instead of the unittest directory)
+   to the project root (instead of the unittest directory).
 
 ### How to use with VS Code
 

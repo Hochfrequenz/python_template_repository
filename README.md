@@ -65,8 +65,14 @@ tox -e dev
     ],
     "python.linting.pylintEnabled": true
 ```
+4. Create a `.env` file and insert the following line
+```
+PYTHONPATH=src:${PYTHONPATH}
+```
+This makes sure, that the imports are working for the unittests.
+At the moment I am not totally sure that it is the best practise, but it's getting the job done.
 
-4. Enjoy 🤗
+5. Enjoy 🤗
 
 ## Contribute
 

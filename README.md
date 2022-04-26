@@ -44,9 +44,10 @@ tox -e dev
 2. Set the
    default [test runner of your project](https://www.jetbrains.com/help/pycharm/choosing-your-testing-framework.html) to
    pytest.
-3. Set
+3. Set the `src` directory as sources root (via right click, [docs](https://www.jetbrains.com/help/pycharm/content-root.html)).
+4. Set
    the [working directory of the unit tests](https://www.jetbrains.com/help/pycharm/creating-run-debug-configuration-for-tests.html)
-   to the project root (instead of the unittest directory)
+   to the project root (instead of the unittest directory).
 
 ### How to use with VS Code
 
@@ -64,8 +65,14 @@ tox -e dev
     ],
     "python.linting.pylintEnabled": true
 ```
+4. Create a `.env` file and insert the following line
+```
+PYTHONPATH=src:${PYTHONPATH}
+```
+This makes sure, that the imports are working for the unittests.
+At the moment I am not totally sure that it is the best practise, but it's getting the job done.
 
-4. Enjoy 🤗
+5. Enjoy 🤗
 
 ## Contribute
 

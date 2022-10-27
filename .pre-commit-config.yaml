@@ -1,3 +1,4 @@
+# to update all repo revisions just run: pre-commit autoupdate
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
@@ -6,7 +7,7 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
   - repo: https://github.com/psf/black
-    rev: 22.10.0 # Replace by any tag/version: https://github.com/psf/black/tags
+    rev: 22.10.0
     hooks:
       - id: black
         language_version: python3

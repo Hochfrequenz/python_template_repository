@@ -71,7 +71,7 @@ For Windows:
 ```
 PYTHONPATH=src;${PYTHONPATH}
 ```
-For Linux:
+For Linux and Mac:
 ```
 PYTHONPATH=src:${PYTHONPATH}
 ```

@@ -66,6 +66,12 @@ tox -e dev
     "python.linting.pylintEnabled": true
 ```
 4. Create a `.env` file and insert the following line
+
+For Windows:
+```
+PYTHONPATH=src;${PYTHONPATH}
+```
+For Linux:
 ```
 PYTHONPATH=src:${PYTHONPATH}
 ```

@@ -21,9 +21,8 @@ This is a template repository. It doesn't contain any useful code but only a min
   - [pylint](https://pylint.org/) (only accepts 10/10 code rating by default)
   - [mypy](https://github.com/python/mypy) (static type checks where possible)
   - [black](https://github.com/psf/black) code formatter check
-    using [lgeiger/black-action](https://github.com/lgeiger/black-action)
 
-By default it uses Python version 3.11.
+By default, it uses Python version 3.11.
 
 ## How to use this Repository on Your Machine
 

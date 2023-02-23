@@ -21,6 +21,8 @@ This is a template repository. It doesn't contain any useful code but only a min
   - [pylint](https://pylint.org/) (only accepts 10/10 code rating by default)
   - [mypy](https://github.com/python/mypy) (static type checks where possible)
   - [black](https://github.com/psf/black) code formatter check
+  - [isort](https://pycqa.github.io/isort/) import order check
+  
 
 By default, it uses Python version 3.11.
 

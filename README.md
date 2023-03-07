@@ -26,12 +26,6 @@ This is a template repository. It doesn't contain any useful code but only a min
 
 By default, it uses Python version 3.11.
 
-### Shortcomings
-The dependencies of the package itself are version pinned in `requirements.txt`.
-But the versions of black, pylint and mypy used in the CI are not pinned.
-This means that commits that passed the CI check at one point in time may not pass the CI later (when a new version of black or the linters are availble).
-The advantage of this setup is, that you always use the latest linters.
-
 ## How to use this Repository on Your Machine
 
 This introduction assumes that you have tox installed already (

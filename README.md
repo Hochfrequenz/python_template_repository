@@ -63,6 +63,7 @@ tox -e dev
 3. **Setup pytest and pylint**. Therefore we open the file `.vscode/settings.json` which should be automatically generated during the interpreter setup. Insert the following lines into the settings:
 
 ```json
+{
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.pytestEnabled": true,
@@ -71,6 +72,7 @@ tox -e dev
         "unittests"
     ],
     "python.linting.pylintEnabled": true
+}
 ```
 4. Create a `.env` file and insert the following line
 

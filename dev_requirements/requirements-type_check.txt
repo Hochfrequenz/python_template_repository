@@ -4,11 +4,9 @@
 #
 #    pip-compile requirements-type_check.in
 #
-mypy==1.1.1
-    # via -r requirements-type_check.in
+mypy==1.2.0
+    # via -r dev_requirements/requirements-type_check.in
 mypy-extensions==1.0.0
-    # via mypy
-tomli==2.0.1
     # via mypy
 typing-extensions==4.5.0
     # via mypy

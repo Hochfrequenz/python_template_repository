@@ -33,6 +33,8 @@ see [installation instructions](https://tox.readthedocs.io/en/latest/installatio
 has been created.
 `.toxbase` is a project independent virtual environment-template for all the tox environments on your machine. If anything is weird during the tox installation or after the installation, try turning your computer off and on again before getting too frustrated.
 
+Also on new windows machines it is possible that the execution policy is set to restricted and you are not allowed execute scripts. You can find detailed information [here](https://learn.microsoft.com/de-de/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3).
+
 If this is the case, clone this repository and create the `dev` environment on your machine.
 
 ```bash

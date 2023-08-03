@@ -31,7 +31,7 @@ By default, it uses Python version 3.11.
 This introduction assumes that you have tox installed already (
 see [installation instructions](https://tox.readthedocs.io/en/latest/installation.html)) and that a `.toxbase` environment
 has been created.
-`.toxbase` is a project independent virtual environment-template for all the tox environments on your machine.
+`.toxbase` is a project independent virtual environment-template for all the tox environments on your machine. If anything is weird during the tox installation or after the installation, try turning your computer off and on again before getting too frustrated.
 
 If this is the case, clone this repository and create the `dev` environment on your machine.
 

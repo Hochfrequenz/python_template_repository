@@ -29,7 +29,7 @@ By default, it uses Python version 3.11.
 ## How to use this Repository on Your Machine
 
 This introduction assumes that you have tox installed already (
-see [installation instructions](https://tox.readthedocs.io/en/latest/install.html)) and that a `.toxbase` environment
+see [installation instructions](https://tox.readthedocs.io/en/latest/installation.html)) and that a `.toxbase` environment
 has been created.
 
 If this is the case, clone this repository and create the `dev` environment on your machine.

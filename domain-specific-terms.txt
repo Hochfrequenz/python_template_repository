@@ -1,0 +1,1 @@
+# contains 1 lowercase word per line which are ignored in the spell_check

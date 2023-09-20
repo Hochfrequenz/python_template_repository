@@ -5,7 +5,7 @@
 ![Unittests status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Unittests/badge.svg)
 ![Coverage status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Coverage/badge.svg)
 ![Linting status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Linting/badge.svg)
-![Black status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Black/badge.svg)
+![Black status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Formatting/badge.svg)
 
 This is a template repository. It doesn't contain any useful code but only a minimal working setup for a Python project including:
 
@@ -21,15 +21,19 @@ This is a template repository. It doesn't contain any useful code but only a min
   - [pylint](https://pylint.org/) (only accepts 10/10 code rating by default)
   - [mypy](https://github.com/python/mypy) (static type checks where possible)
   - [black](https://github.com/psf/black) code formatter check
-    using [lgeiger/black-action](https://github.com/lgeiger/black-action)
+  - [isort](https://pycqa.github.io/isort/) import order check
+  
 
-By default it uses Python version 3.10.
+By default, it uses Python version 3.11.
 
 ## How to use this Repository on Your Machine
 
 This introduction assumes that you have tox installed already (
-see [installation instructions](https://tox.readthedocs.io/en/latest/install.html)) and that a `.toxbase` environment
+see [installation instructions](https://tox.readthedocs.io/en/latest/installation.html)) and that a `.toxbase` environment
 has been created.
+`.toxbase` is a project independent virtual environment-template for all the tox environments on your machine. If anything is weird during the tox installation or after the installation, try turning your computer off and on again before getting too frustrated.
+
+Also on new windows machines it is possible that the execution policy is set to restricted and you are not allowed execute scripts. You can find detailed information [here](https://learn.microsoft.com/de-de/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3).
 
 If this is the case, clone this repository and create the `dev` environment on your machine.
 
@@ -52,10 +56,11 @@ tox -e dev
 ### How to use with VS Code
 
 1. Open the folder with VS Code.
-2. **Select the python interpreter** which is created by tox. Open the command pallett with `CTRL + P` and type `Python: Select Interpreter`. Select the interpreter which is placed in `.tox/dev/Scripts/python.exe` under Windows or `.tox/dev/bin/python` under Linux and macOS.
+2. **Select the python interpreter** ([official docs](https://code.visualstudio.com/docs/python/environments#_manually-specify-an-interpreter)) which is created by tox. Open the command pallett with `CTRL + P` and type `Python: Select Interpreter`. Select the interpreter which is placed in `.tox/dev/Scripts/python.exe` under Windows or `.tox/dev/bin/python` under Linux and macOS.
 3. **Setup pytest and pylint**. Therefore we open the file `.vscode/settings.json` which should be automatically generated during the interpreter setup. Insert the following lines into the settings:
 
 ```json
+{
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.pytestEnabled": true,
@@ -64,8 +69,15 @@ tox -e dev
         "unittests"
     ],
     "python.linting.pylintEnabled": true
+}
 ```
 4. Create a `.env` file and insert the following line
+
+For Windows:
+```
+PYTHONPATH=src;${PYTHONPATH}
+```
+For Linux and Mac:
 ```
 PYTHONPATH=src:${PYTHONPATH}
 ```

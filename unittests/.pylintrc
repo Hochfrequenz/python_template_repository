@@ -1,0 +1,11 @@
+[pylint]
+# for the unittests disable some pylint warnings, e.g. we don't want to force devs to write docstrings for every test
+disable =
+    C0114,  # disable missing-module-docstring
+    C0115,  # disable missing-class-docstring
+    C0116,  # disable missing-function-docstring
+    R0903,  # disable too-few-public-methods
+    W0621,  # disable redefined-outer-name (this is for the use of pytest fixtures)
+    R0801,  # disable duplicate-code (we prefer our test to be explicit rather than perfectly redundancy free)
+[pylint."MESSAGES CONTROL"]
+max-line-length = 120

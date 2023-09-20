@@ -1,8 +1,8 @@
-name: "Unittests"
+name: "Packaging Test"
 
-on: [push]
+on: [pull_request]
 jobs:
-  pytest:
+  check_packaging:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -14,10 +14,10 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install Dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install tox
-      - name: Run the Unit Tests via Tox
+      - name: Run Packaging Test
         run: |
-          tox -e tests
+          tox -e test_packaging

@@ -90,13 +90,13 @@ At the moment I am not totally sure that it is the best practise, but it's getti
 
 ## Publishing on PyPI
 This repository contains all necessary CI steps to publish any project created from it on PyPI.
-It just requires some manual adjustments/settings dependening on your project:
+It just requires some manual adjustments/settings depending on your project:
 1. Fill out the metadata in the [`pyproject.toml`](pyproject.toml); Namely the package name and the dependencies which should be in sync with your `requirements.in`.
 2. Uncomment the lines in [`.github/workflows/python-publish.yml`](.github/workflows/python-publish.yml)
-3. In [your PyPI account create a new API token](https://pypi.org/manage/account/#api-tokens). You have to create a token valid for your entire accout first, only when the initial push happend, you can create a new token whose scope is limited to this project.
+3. In [your PyPI account create a new API token](https://pypi.org/manage/account/#api-tokens). You have to create a token valid for your entire account first, only when the initial push happened, you can create a new token whose scope is limited to this project.
 4. Copy the token and paste it as a new repository secret under `github.com/your-username/your-reponame/settings/secrets/actions/new`. The secrets name should be `PYPI_API_TOKEN` as in the last line of the workflow file you edited in step 2.
 5. Now create a release by clicking on "Create new release" in the right Github sidebar (or visit `github.com/your-username/your-reponame/releases/new`). This should trigger the workflow (see the "Actions" tab of your repo).
-6. Check if the action failed. If it suceeded your PyPI account should now show the new project. It might take some minutes until the package can be installed via `pip install packagename` because the index has to be updated.
+6. Check if the action failed. If it succeeded your PyPI account should now show the new project. It might take some minutes until the package can be installed via `pip install packagename` because the index has to be updated.
 7. Now create another PyPI token with limited scope and update the Github repository secret accordingly.
 
 ## Contribute

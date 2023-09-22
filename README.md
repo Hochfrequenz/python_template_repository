@@ -1,4 +1,4 @@
-# Python Template Repository including Tox.ini, Unittests, Linting Actions and Coverage Measurements
+# Python Template Repository including a `tox.ini`, Unittests&Coverage, Pylint & MyPy Linting Actions and a PyPI Publishing Workflow
 
 <!--- you need to replace the `organization/repo_name` in the status badge URLs --->
 
@@ -22,6 +22,8 @@ This is a template repository. It doesn't contain any useful code but only a min
   - [mypy](https://github.com/python/mypy) (static type checks where possible)
   - [black](https://github.com/psf/black) code formatter check
   - [isort](https://pycqa.github.io/isort/) import order check
+  - [codespell](https://github.com/codespell-project/codespell) spell check (including an ignore list)
+  - ready-to-use publishing workflow for pypi (see readme section below)
   
 
 By default, it uses Python version 3.11.
@@ -85,6 +87,17 @@ This makes sure, that the imports are working for the unittests.
 At the moment I am not totally sure that it is the best practise, but it's getting the job done.
 
 5. Enjoy 🤗
+
+## Publishing on PyPI
+This repository contains all necessary CI steps to publish any project created from it on PyPI.
+It just requires some manual adjustments/settings dependening on your project:
+1. Fill out the metadata in the [`pyproject.toml`](pyproject.toml); Namely the package name and the dependencies which should be in sync with your `requirements.in`.
+2. Uncomment the lines in [`.github/workflows/python-publish.yml`](.github/workflows/python-publish.yml)
+3. In [your PyPI account create a new API token](https://pypi.org/manage/account/#api-tokens). You have to create a token valid for your entire accout first, only when the initial push happend, you can create a new token whose scope is limited to this project.
+4. Copy the token and paste it as a new repository secret under `github.com/your-username/your-reponame/settings/secrets/actions/new`. The secrets name should be `PYPI_API_TOKEN` as in the last line of the workflow file you edited in step 2.
+5. Now create a release by clicking on "Create new release" in the right Github sidebar (or visit `github.com/your-username/your-reponame/releases/new`). This should trigger the workflow (see the "Actions" tab of your repo).
+6. Check if the action failed. If it suceeded your PyPI account should now show the new project. It might take some minutes until the package can be installed via `pip install packagename` because the index has to be updated.
+7. Now create another PyPI token with limited scope and update the Github repository secret accordingly.
 
 ## Contribute
 

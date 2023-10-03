@@ -7,7 +7,8 @@
 ![Linting status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Linting/badge.svg)
 ![Black status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Formatting/badge.svg)
 
-This is a template repository. It doesn't contain any useful code but only a minimal working setup for a Python project including:
+This is a template repository.
+It doesn't contain any useful code but only a minimal working setup for a Python project including:
 
 - a basic **project structure** with
   - tox.ini
@@ -26,7 +27,7 @@ This is a template repository. It doesn't contain any useful code but only a min
   - ready-to-use publishing workflow for pypi (see readme section below)
   
 
-By default, it uses Python version 3.11.
+By default, it uses Python version 3.12.
 
 ## How to use this Repository on Your Machine
 

@@ -4,5 +4,5 @@
 #
 #    pip-compile requirements-spellcheck.in
 #
-codespell==2.2.5
-    # via -r requirements-spellcheck.in
+codespell==2.2.6
+    # via -r dev_requirements/requirements-spell_check.in

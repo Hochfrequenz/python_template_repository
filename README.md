@@ -25,7 +25,6 @@ It doesn't contain any useful code but only a minimal working setup for a Python
   - [isort](https://pycqa.github.io/isort/) import order check
   - [codespell](https://github.com/codespell-project/codespell) spell check (including an ignore list)
   - ready-to-use publishing workflow for pypi (see readme section below)
-  
 
 By default, it uses Python version 3.12.
 
@@ -64,34 +63,39 @@ tox -e dev
 
 ```json
 {
-    "python.testing.unittestEnabled": false,
-    "python.testing.nosetestsEnabled": false,
-    "python.testing.pytestEnabled": true,
-    "pythonTestExplorer.testFramework": "pytest",
-    "python.testing.pytestArgs": [
-        "unittests"
-    ],
-    "python.linting.pylintEnabled": true
+  "python.testing.unittestEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "pythonTestExplorer.testFramework": "pytest",
+  "python.testing.pytestArgs": ["unittests"],
+  "python.linting.pylintEnabled": true
 }
 ```
+
 4. Create a `.env` file and insert the following line
 
 For Windows:
+
 ```
 PYTHONPATH=src;${PYTHONPATH}
 ```
+
 For Linux and Mac:
+
 ```
 PYTHONPATH=src:${PYTHONPATH}
 ```
+
 This makes sure, that the imports are working for the unittests.
 At the moment I am not totally sure that it is the best practise, but it's getting the job done.
 
 5. Enjoy 🤗
 
 ## Publishing on PyPI
+
 This repository contains all necessary CI steps to publish any project created from it on PyPI.
 It just requires some manual adjustments/settings depending on your project:
+
 1. Fill out the metadata in the [`pyproject.toml`](pyproject.toml); Namely the package name and the dependencies which should be in sync with your `requirements.in`.
 2. Uncomment the lines in [`.github/workflows/python-publish.yml`](.github/workflows/python-publish.yml)
 3. In [your PyPI account create a new API token](https://pypi.org/manage/account/#api-tokens). You have to create a token valid for your entire account first, only when the initial push happened, you can create a new token whose scope is limited to this project.

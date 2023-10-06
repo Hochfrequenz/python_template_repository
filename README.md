@@ -94,12 +94,18 @@ At the moment I am not totally sure that it is the best practise, but it's getti
 ## Publishing on PyPI
 
 This repository contains all necessary CI steps to publish any project created from it on PyPI.
+It uses the trusted publishers workflow as described in the [official Python documentation](https://packaging.python.org/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/).
 It just requires some manual adjustments/settings depending on your project:
 
 1. Fill out the metadata in the [`pyproject.toml`](pyproject.toml); Namely the package name and the dependencies which should be in sync with your `requirements.in`.
 2. Uncomment the lines in [`.github/workflows/python-publish.yml`](.github/workflows/python-publish.yml)
-3. In [your PyPI account create a new API token](https://pypi.org/manage/account/#api-tokens). You have to create a token valid for your entire account first, only when the initial push happened, you can create a new token whose scope is limited to this project.
-4. Copy the token and paste it as a new repository secret under `github.com/your-username/your-reponame/settings/secrets/actions/new`. The secrets name should be `PYPI_API_TOKEN` as in the last line of the workflow file you edited in step 2.
+3. Create a new environment in your GitHub repository and call it `release`.
+4. Set up a new trusted publisher [in your PYPI account](https://pypi.org/manage/account/publishing/).
+   1. PyPI Project Name: The name which you defined in the `pyproject.toml` is the name of the project which you have to enter here.
+   2. Owner: The GitHub organization name or GitHub username that owns the repository
+   3. Repository name: The name of the GitHub repository that contains the publishing workflow
+   4. Workflow name: The filename of the publishing workflow. This file should exist in the .github/workflows/ directory in the repository configured above. Here in our case: `python-publish.yml`
+   5. Environment name: The name of the GitHub Actions environment that the above workflow uses for publishing. Here in our case: `release`
 5. Now create a release by clicking on "Create new release" in the right Github sidebar (or visit `github.com/your-username/your-reponame/releases/new`). This should trigger the workflow (see the "Actions" tab of your repo).
 6. Check if the action failed. If it succeeded your PyPI account should now show the new project. It might take some minutes until the package can be installed via `pip install packagename` because the index has to be updated.
 7. Now create another PyPI token with limited scope and update the Github repository secret accordingly.

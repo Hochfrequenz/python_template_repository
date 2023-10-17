@@ -113,3 +113,12 @@ It just requires some manual adjustments/settings depending on your project:
 ## Contribute
 
 You are very welcome to contribute to this template repository by opening a pull request against the main branch.
+
+### GitHub Actions
+
+- Dependabot auto-approve / -merge:
+  - If the actor is the Dependabot bot (i.e. on every commit by Dependabot)
+    the pull request is automatically approved and auto merge gets activated
+    (using squash merge).
+    Note that if you haven't enabled "auto merge" for your repository, the auto merge activation will fail.
+    If you want to use a merge type other than "squash merge" you have to edit the workflow.

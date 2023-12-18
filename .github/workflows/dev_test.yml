@@ -3,7 +3,7 @@ name: "Test Dev Environment"
 # this might not work, if different linting/testing envs refer to different versions of the same lib (e.g. typing-extensions)
 on: [ push, pull_request ]
 jobs:
-  pytest:
+  check:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:

@@ -1,7 +1,8 @@
 # This GitHub workflow is only needed for python package releases which are supposed to be published on pypi.
+# It requires the Github "environments" feature (see instructions below) it might not be available for private free accounts (but works for public or organization repos).
+# After creating the "release" environment in the Github repo settings, you need to enter your Github organization/user name + repo name + "python-publish.yml" workflow file name in the PyPI UI to make this work.
 
-
-# This workflows will upload a Python Package using Twine when a release is created
+# This workflow uploads a Python Package using Twine when a release is created.
 # For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
 
 # name: Upload Python Package

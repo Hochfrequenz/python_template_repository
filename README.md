@@ -28,6 +28,8 @@ It doesn't contain any useful code but only a minimal working setup for a Python
 
 By default, it uses Python version 3.12.
 
+This repository uses a `src`-based layout.
+
 ## How to use this Repository on Your Machine
 
 This introduction assumes that you have tox installed already (

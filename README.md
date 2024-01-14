@@ -46,13 +46,12 @@ tox -e dev
 ### How to use with PyCharm
 
 1. Create a new project using existing sources with your local working copy of this repository as root directory. Choose
-   the path `your_repo/.tox/dev/` as path of the "previously configured interpreter".
+   the path `your_repo/.tox/dev/` as path of the "previously configured interpreter" (CTRL+ALT+S; Project Settings; Add local interpreter).
 2. Set the
    default [test runner of your project](https://www.jetbrains.com/help/pycharm/choosing-your-testing-framework.html) to
    pytest.
-3. Set the `src` directory as sources root (via right click, [docs](https://www.jetbrains.com/help/pycharm/content-root.html)).
-4. Set
-   the [working directory of the unit tests](https://www.jetbrains.com/help/pycharm/creating-run-debug-configuration-for-tests.html)
+3. In the project explorer, mark the `src` directory as sources root (via right click, see the [PyCharm docs](https://www.jetbrains.com/help/pycharm/content-root.html)).
+4. Set the [working directory of the unit tests](https://www.jetbrains.com/help/pycharm/creating-run-debug-configuration-for-tests.html)
    to the project root (instead of the unittest directory).
 
 ### How to use with VS Code

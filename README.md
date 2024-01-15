@@ -63,9 +63,9 @@ You have now created the development environment (dev environment). It is the en
 1. Create a new project using existing sources with your local working copy of this repository as root directory. Choose
    the path `your_repo/.tox/dev/` as path of the "previously configured interpreter" (CTRL+ALT+S; Project Settings; Add local interpreter).
 2. Set the default test runner of your project to pytest. How to do it:
-a) navigate to Files -> Settings -> Tools -> Python integrated tools -> Testing: Default test runner
+a) navigate to Files ➡ Settings ➡ Tools ➡ Python integrated tools ➡ Testing: Default test runner
 b) Change to "pytest"
-If this doesn't work anymore, see: https://www.jetbrains.com/help/pycharm/choosing-your-testing-framework.html
+If this doesn't work anymore, see [the PyCharm docs](https://www.jetbrains.com/help/pycharm/choosing-your-testing-framework.html)
 3. In the project explorer, mark the `src` directory as sources root (via right click, see the [PyCharm docs](https://www.jetbrains.com/help/pycharm/content-root.html)).
 4. Set the [working directory of the unit tests](https://www.jetbrains.com/help/pycharm/creating-run-debug-configuration-for-tests.html)
    to the project root (instead of the unittest directory).

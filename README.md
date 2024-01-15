@@ -65,9 +65,9 @@ You have now created the development environment (dev environment). It is the en
 2. Set the
    default [test runner of your project](https://www.jetbrains.com/help/pycharm/choosing-your-testing-framework.html) to
    pytest.
-3. Set the 'src' directory as sources root. How to do this:
-right click on 'src' -> Mark directory as... -> sources root
-If this doesn't work anymore, see: [PyCharm docs] and (https://www.jetbrains.com/help/pycharm/content-root.html)).
+3. Set the `src` directory as sources root. How to do this:
+right click on 'src' ➡ "Mark directory as…" ➡ sources root
+If this doesn't work anymore, see: [PyCharm docs](https://www.jetbrains.com/help/pycharm/content-root.html).
 4. Set the [working directory of the unit tests](https://www.jetbrains.com/help/pycharm/creating-run-debug-configuration-for-tests.html)
    to the project root (instead of the unittest directory).
 

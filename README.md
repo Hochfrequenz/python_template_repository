@@ -46,7 +46,7 @@ tox -e dev
 ### How to use with PyCharm
 
 1. Create a new project using existing sources with your local working copy of this repository as root directory. Choose
-   the path `your_repo/.tox/dev/` as path of the "previously configured interpreter" (CTRL+ALT+S; Project Settings; Add local interpreter).
+   the path `your_repo/.tox/dev/` as path of the "previously configured" or "existing interpreter" (CTRL+ALT+S; Project Settings; Add local interpreter).
 2. Set the
    default [test runner of your project](https://www.jetbrains.com/help/pycharm/choosing-your-testing-framework.html) to
    pytest.

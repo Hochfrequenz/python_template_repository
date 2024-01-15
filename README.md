@@ -63,9 +63,10 @@ You have now created the development environment (dev environment). It is the en
 1. You have cloned the repository, you want to work in, and have created the virtual environment, in which the repository should be executed (`your_repo/.tox/dev`). Now, to actually work inside the newly created environment, you need to tell PyCharm (your IDE) that it should use with the virtual environment - to be more precise: with the interpreter of this dev environment. How to do this:
 a) navigate to: File ➡ Settings (Strg + Alt + S) ➡ Project: your_project ➡ Python Interpreter ➡ Add interpreter ➡ Existing
 b) Choose as interpreter: `your_repo\.tox\dev\Scripts\python.exe` (under windows)
-2. Set the
-   default [test runner of your project](https://www.jetbrains.com/help/pycharm/choosing-your-testing-framework.html) to
-   pytest.
+2. Set the default test runner of your project to pytest. How to do it:
+a) navigate to Files ➡ Settings ➡ Tools ➡ Python integrated tools ➡ Testing: Default test runner
+b) Change to "pytest"
+If this doesn't work anymore, see [the PyCharm docs](https://www.jetbrains.com/help/pycharm/choosing-your-testing-framework.html)
 3. In the project explorer, mark the `src` directory as sources root (via right click, see the [PyCharm docs](https://www.jetbrains.com/help/pycharm/content-root.html)).
 4. Set the [working directory of the unit tests](https://www.jetbrains.com/help/pycharm/creating-run-debug-configuration-for-tests.html)
    to the project root (instead of the unittest directory).

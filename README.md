@@ -35,13 +35,28 @@ see [installation instructions](https://tox.readthedocs.io/en/latest/installatio
 has been created.
 `.toxbase` is a project independent virtual environment-template for all the tox environments on your machine. If anything is weird during the tox installation or after the installation, try turning your computer off and on again before getting too frustrated.
 
+### Powershell restrictions on Windows
 Also on new windows machines it is possible that the execution policy is set to restricted and you are not allowed execute scripts. You can find detailed information [here](https://learn.microsoft.com/de-de/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3).
 
-If this is the case, clone this repository and create the `dev` environment on your machine.
+The quickest way to solve this problem: Open an Administrator Powershell (e.g. Windows PowerShell App)
+```ps
+Set-ExecutionPolicy -ExecutionPolicy AllSigned
+```
+and try again (with your regular user, not as admin).
+
+### Creating the project-specifc dev environment.
+If all problems are solved and you're ready to start: 
+   1. clone the repository, you want to work in 
+   2. create the `dev` environment on your machine. To do this: 
+       a) Open a Powershell
+       b) change directory to your repository 
+and finally type
 
 ```bash
 tox -e dev
 ```
+
+You have now created the development environment (dev environment). It is the environment which contains both the usual requirements as well as the testing and linting tools.
 
 ### How to use with PyCharm
 

@@ -51,7 +51,7 @@ If this is the case, clone this repository and create the `dev` environment on y
 tox -e dev
 ```
 
-The dev environment is the environment which contains both the usual requirements as well as the testing and linting tools.
+You have now created the development environment (dev environment). It is the environment which contains both the usual requirements as well as the testing and linting tools.
 
 ### How to use with PyCharm
 

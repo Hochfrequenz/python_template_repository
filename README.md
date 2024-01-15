@@ -67,7 +67,9 @@ b) Choose as interpreter: `your_repo\.tox\dev\Scripts\python.exe` (under windows
 a) navigate to Files ➡ Settings ➡ Tools ➡ Python integrated tools ➡ Testing: Default test runner
 b) Change to "pytest"
 If this doesn't work anymore, see [the PyCharm docs](https://www.jetbrains.com/help/pycharm/choosing-your-testing-framework.html)
-3. In the project explorer, mark the `src` directory as sources root (via right click, see the [PyCharm docs](https://www.jetbrains.com/help/pycharm/content-root.html)).
+3. Set the `src` directory as sources root. How to do this:
+right click on 'src' ➡ "Mark directory as…" ➡ sources root
+If this doesn't work anymore, see: [PyCharm docs](https://www.jetbrains.com/help/pycharm/content-root.html).
 4. Set the [working directory of the unit tests](https://www.jetbrains.com/help/pycharm/creating-run-debug-configuration-for-tests.html)
    to the project root (instead of the unittest directory).
 

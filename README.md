@@ -46,17 +46,17 @@ tox -e dev
 ### How to use with PyCharm
 
 1. Create a new project using existing sources with your local working copy of this repository as root directory. Choose
-   the path `your_repo/.tox/dev/` as path of the "previously configured interpreter".
+   the path `your_repo/.tox/dev/` as path of the "previously configured interpreter" (CTRL+ALT+S; Project Settings; Add local interpreter).
 2. Set the
    default [test runner of your project](https://www.jetbrains.com/help/pycharm/choosing-your-testing-framework.html) to
    pytest.
-3. Set the `src` directory as sources root (via right click, [docs](https://www.jetbrains.com/help/pycharm/content-root.html)).
-4. Set
-   the [working directory of the unit tests](https://www.jetbrains.com/help/pycharm/creating-run-debug-configuration-for-tests.html)
+3. In the project explorer, mark the `src` directory as sources root (via right click, see the [PyCharm docs](https://www.jetbrains.com/help/pycharm/content-root.html)).
+4. Set the [working directory of the unit tests](https://www.jetbrains.com/help/pycharm/creating-run-debug-configuration-for-tests.html)
    to the project root (instead of the unittest directory).
 
 ### How to use with VS Code
-
+All paths mentioned in this section are relative to the repository root.
+ 
 1. Open the folder with VS Code.
 2. **Select the python interpreter** ([official docs](https://code.visualstudio.com/docs/python/environments#_manually-specify-an-interpreter)) which is created by tox. Open the command pallett with `CTRL + P` and type `Python: Select Interpreter`. Select the interpreter which is placed in `.tox/dev/Scripts/python.exe` under Windows or `.tox/dev/bin/python` under Linux and macOS.
 3. **Setup pytest and pylint**. Therefore we open the file `.vscode/settings.json` which should be automatically generated during the interpreter setup. Insert the following lines into the settings:

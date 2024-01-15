@@ -38,7 +38,7 @@ has been created.
 ### Powershell restrictions on Windows
 Also on new windows machines it is possible that the execution policy is set to restricted and you are not allowed execute scripts. You can find detailed information [here](https://learn.microsoft.com/de-de/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3).
 
-The quickest way to get it working is: Open an Administrator Powershell (e.g. Windows PowerShell App)
+The quickest way to solve this problem: Open an Administrator Powershell (e.g. Windows PowerShell App)
 ```ps
 Set-ExecutionPolicy -ExecutionPolicy AllSigned
 ```

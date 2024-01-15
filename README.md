@@ -60,8 +60,9 @@ You have now created the development environment (dev environment). It is the en
 
 ### How to use with PyCharm
 
-1. Create a new project using existing sources with your local working copy of this repository as root directory. Choose
-   the path `your_repo/.tox/dev/` as path of the "previously configured interpreter" (CTRL+ALT+S; Project Settings; Add local interpreter).
+1. You have cloned the repository, you want to work in, and have created the virtual environment, in which the repository should be executed. Now you have to make the repository actually work inside this virtual environment. This means you need to connect your repository with the virtual environment - to be more precise: with the interpreter of this environment. How to do this:
+a) navigate to: File -> Settings (Strg + Alt + S) -> Project: your_project -> Python Interpreter -> Add interpreter -> Existing
+b) Choose as interpreter: your_repo\ tox\dev\Scripts\python.exe
 2. Set the
    default [test runner of your project](https://www.jetbrains.com/help/pycharm/choosing-your-testing-framework.html) to
    pytest.

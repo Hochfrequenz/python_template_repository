@@ -45,7 +45,7 @@ Set-ExecutionPolicy -ExecutionPolicy AllSigned
 and try again (with your regular user, not as admin).
 
 ### Creating the project-specifc dev environment.
-If this is the case, clone this repository and create the `dev` environment on your machine.
+If all problems are solved and you're ready to start: 1.  clone the repository, you want to work in 2. create the `dev` environment on your machine. To do this: a) Open an Administrator Powershell (e.g. Windows PowerShell App) b) change directory to your repository c) type in: "tox - e dev"
 
 ```bash
 tox -e dev

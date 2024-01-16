@@ -74,7 +74,7 @@ If this doesn't work anymore, see: [PyCharm docs](https://www.jetbrains.com/help
 a) Open any test file whose name starts with `test_` in unit tests/tests
 b) Right click inside the code ➡ More Run/Debug ➡ Modify Run Configuration ➡ Working directory
 c) Change to `your_repo` instead of `your_repo\unittests`
-By doing so, the import and other file pathes in the tests are relative to the repo root. 
+By doing so, the import and other file paths in the tests are relative to the repo root. 
 If this doesn't work anymore, see: [working directory of the unit tests](https://www.jetbrains.com/help/pycharm/creating-run-debug-configuration-for-tests.html)
 
 ### How to use with VS Code

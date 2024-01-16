@@ -60,7 +60,7 @@ You have now created the development environment (dev environment). It is the en
 
 ### How to use with PyCharm
 
-1. You have cloned the repository, you want to work in, and have created the virtual environment, in which the repository should be executed (`your_repo/.tox/dev`). Now, to actually work inside the newly created environment, you need to tell PyCharm (your IDE) that it should use with the virtual environment - to be more precise: with the interpreter of this dev environment. How to do this:
+1. You have cloned the repository, you want to work in, and have created the virtual environment, in which the repository should be executed (`your_repo/.tox/dev`). Now, to actually work inside the newly created environment, you need to tell PyCharm (your IDE) that it should use the virtual environment - to be more precise: the interpreter of this dev environment. How to do this:
 a) navigate to: File ➡ Settings (Strg + Alt + S) ➡ Project: your_project ➡ Python Interpreter ➡ Add interpreter ➡ Existing
 b) Choose as interpreter: `your_repo\.tox\dev\Scripts\python.exe` (under windows)
 2. Set the default test runner of your project to pytest. How to do it:

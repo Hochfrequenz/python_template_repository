@@ -28,7 +28,8 @@ It doesn't contain any useful code but only a minimal working setup for a Python
 
 By default, it uses Python version 3.12.
 
-This repository uses a `src`-based layout.
+This repository uses a [`src`-based layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/).
+This approach has many advantages and basically means for developers, that all business logic lives in the `src` directory.
 
 ## How to use this Repository on Your Machine
 

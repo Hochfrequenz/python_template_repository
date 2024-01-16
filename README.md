@@ -35,28 +35,47 @@ see [installation instructions](https://tox.readthedocs.io/en/latest/installatio
 has been created.
 `.toxbase` is a project independent virtual environment-template for all the tox environments on your machine. If anything is weird during the tox installation or after the installation, try turning your computer off and on again before getting too frustrated.
 
+### Powershell restrictions on Windows
 Also on new windows machines it is possible that the execution policy is set to restricted and you are not allowed execute scripts. You can find detailed information [here](https://learn.microsoft.com/de-de/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3).
 
-If this is the case, clone this repository and create the `dev` environment on your machine.
+The quickest way to solve this problem: Open an Administrator Powershell (e.g. Windows PowerShell App)
+```ps
+Set-ExecutionPolicy -ExecutionPolicy AllSigned
+```
+and try again (with your regular user, not as admin).
+
+### Creating the project-specifc dev environment.
+If all problems are solved and you're ready to start: 
+   1. clone the repository, you want to work in 
+   2. create the `dev` environment on your machine. To do this: 
+       a) Open a Powershell
+       b) change directory to your repository 
+and finally type
 
 ```bash
 tox -e dev
 ```
 
+You have now created the development environment (dev environment). It is the environment which contains both the usual requirements as well as the testing and linting tools.
+
 ### How to use with PyCharm
 
-1. Create a new project using existing sources with your local working copy of this repository as root directory. Choose
-   the path `your_repo/.tox/dev/` as path of the "previously configured interpreter".
-2. Set the
-   default [test runner of your project](https://www.jetbrains.com/help/pycharm/choosing-your-testing-framework.html) to
-   pytest.
-3. Set the `src` directory as sources root (via right click, [docs](https://www.jetbrains.com/help/pycharm/content-root.html)).
-4. Set
-   the [working directory of the unit tests](https://www.jetbrains.com/help/pycharm/creating-run-debug-configuration-for-tests.html)
+1. You have cloned the repository, you want to work in, and have created the virtual environment, in which the repository should be executed (`your_repo/.tox/dev`). Now, to actually work inside the newly created environment, you need to tell PyCharm (your IDE) that it should use with the virtual environment - to be more precise: with the interpreter of this dev environment. How to do this:
+a) navigate to: File ➡ Settings (Strg + Alt + S) ➡ Project: your_project ➡ Python Interpreter ➡ Add interpreter ➡ Existing
+b) Choose as interpreter: `your_repo\.tox\dev\Scripts\python.exe` (under windows)
+2. Set the default test runner of your project to pytest. How to do it:
+a) navigate to Files ➡ Settings ➡ Tools ➡ Python integrated tools ➡ Testing: Default test runner
+b) Change to "pytest"
+If this doesn't work anymore, see [the PyCharm docs](https://www.jetbrains.com/help/pycharm/choosing-your-testing-framework.html)
+3. Set the `src` directory as sources root. How to do this:
+right click on 'src' ➡ "Mark directory as…" ➡ sources root
+If this doesn't work anymore, see: [PyCharm docs](https://www.jetbrains.com/help/pycharm/content-root.html).
+4. Set the [working directory of the unit tests](https://www.jetbrains.com/help/pycharm/creating-run-debug-configuration-for-tests.html)
    to the project root (instead of the unittest directory).
 
 ### How to use with VS Code
-
+All paths mentioned in this section are relative to the repository root.
+ 
 1. Open the folder with VS Code.
 2. **Select the python interpreter** ([official docs](https://code.visualstudio.com/docs/python/environments#_manually-specify-an-interpreter)) which is created by tox. Open the command pallett with `CTRL + P` and type `Python: Select Interpreter`. Select the interpreter which is placed in `.tox/dev/Scripts/python.exe` under Windows or `.tox/dev/bin/python` under Linux and macOS.
 3. **Setup pytest and pylint**. Therefore we open the file `.vscode/settings.json` which should be automatically generated during the interpreter setup. If it doesn't exist, create it. Insert the following lines into the settings:

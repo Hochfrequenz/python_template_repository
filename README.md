@@ -12,7 +12,7 @@ It doesn't contain any useful code but only a minimal working setup for a Python
 
 - a basic **project structure** with
   - tox.ini
-  - requirements.in
+  - `pyproject.toml` where the project metadata and dependencies are defined
   - and a requirements.txt derived from it
   - an example class
   - an example unit test (using pytest)

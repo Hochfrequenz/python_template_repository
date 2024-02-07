@@ -73,7 +73,9 @@ If this doesn't work anymore, see [the PyCharm docs](https://www.jetbrains.com/h
 3. Set the `src` directory as sources root. How to do this:
 right click on 'src' ➡ "Mark directory as…" ➡ sources root
 If this doesn't work anymore, see: [PyCharm docs](https://www.jetbrains.com/help/pycharm/content-root.html).
-4. Set the working directory of the unit tests to the project root (instead of the unittest directory). How to do this:
+Setting the `src` directory right, allows PyCharm to effectively suggest import paths.
+If you ever see something like `from src.mypackage.mymodule import ...`, then you probably forgot this step.
+5. Set the working directory of the unit tests to the project root (instead of the unittest directory). How to do this:
 a) Open any test file whose name starts with `test_` in unit tests/tests
 b) Right click inside the code ➡ More Run/Debug ➡ Modify Run Configuration ➡ Working directory
 c) Change to `your_repo` instead of `your_repo\unittests`

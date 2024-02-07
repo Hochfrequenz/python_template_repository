@@ -2,14 +2,17 @@ name: "Test Dev Environment"
 # Checks that the dev environment (tox -e dev) can be set up.
 # This might not work, if different linting/testing envs refer to different versions of the same lib (e.g. typing-extensions).
 # Different versions of the same package might work for isolated specific envs (only linting, only testing...) but the dev environment inherits from all of them.
-on: [ push, pull_request ]
+on:
+  push:
+    branches: [main]
+  pull_request: {}
 jobs:
   check:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        python-version: [ "3.11", "3.12" ]
-        os: [ ubuntu-latest ]
+        python-version: ["3.11", "3.12"]
+        os: [ubuntu-latest]
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}

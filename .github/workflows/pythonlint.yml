@@ -1,6 +1,9 @@
 name: "Linting"
 
-on: [push]
+on:
+  push:
+    branches: [main]
+  pull_request: {}
 jobs:
   pylint:
     name: Python Code Quality and Lint

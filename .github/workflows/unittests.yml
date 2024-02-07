@@ -1,6 +1,9 @@
 name: "Unittests"
 
-on: [push]
+on:
+  push:
+    branches: [main]
+  pull_request: {}
 jobs:
   pytest:
     runs-on: ${{ matrix.os }}

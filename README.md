@@ -24,6 +24,7 @@ It doesn't contain any useful code but only a minimal working setup for a Python
   - [black](https://github.com/psf/black) code formatter check
   - [isort](https://pycqa.github.io/isort/) import order check
   - [codespell](https://github.com/codespell-project/codespell) spell check (including an ignore list)
+  - autoresolve dev-dependencies with `tox -e compile_requirements`
   - ready-to-use publishing workflow for pypi (see readme section below)
 
 By default, it uses Python version 3.12.

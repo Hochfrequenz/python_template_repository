@@ -35,7 +35,7 @@ profile = "black"
 max-line-length = 120
 
 [mypy]
-truethy-bool = True
+truethy-bool = true
 
 [build-system]
 requires = ["hatchling>=1.8.0", "hatch-vcs", "hatch-fancy-pypi-readme"]

@@ -78,7 +78,7 @@ Setting the `src` directory right, allows PyCharm to effectively suggest import 
 If you ever see something like `from src.mypackage.mymodule import ...`, then you probably forgot this step.
 5. Set the working directory of the unit tests to the project root (instead of the unittest directory). How to do this:
 a) Open any test file whose name starts with `test_` in unit tests/tests
-b) Right click inside the code ➡ More Run/Debug ➡ Modify Run Configuration ➡ Working directory
+b) Right click inside the code ➡ More Run/Debug ➡ Modify Run Configuration ➡ expand Environment collapsible ➡ Working directory
 c) Change to `your_repo` instead of `your_repo\unittests`
 By doing so, the import and other file paths in the tests are relative to the repo root. 
 If this doesn't work anymore, see: [working directory of the unit tests](https://www.jetbrains.com/help/pycharm/creating-run-debug-configuration-for-tests.html)

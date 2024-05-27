@@ -5,5 +5,5 @@
 #
 #    pip-compile-multi
 #
-codespell==2.2.6
-    # via -r dev_requirements\requirements-spell_check.in
+codespell==2.3.0
+    # via -r dev_requirements/requirements-spell_check.in

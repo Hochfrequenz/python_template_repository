@@ -8,7 +8,7 @@ class MyClass:  # pylint: disable=too-few-public-methods
     This is a docstring for the class.
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
         """
         Initialize for the sake of initializing
         """

@@ -38,7 +38,7 @@ max-line-length = 120
 truethy-bool = true
 
 [tool.mypy]
-disable_error_code = ["no-untyped-def", "no-untyped-call"]
+disable_error_code = []
 
 [build-system]
 requires = ["hatchling>=1.8.0", "hatch-vcs", "hatch-fancy-pypi-readme"]

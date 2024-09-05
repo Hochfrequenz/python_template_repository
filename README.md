@@ -34,22 +34,140 @@ This approach has many advantages and basically means for developers, that all b
 
 ## How to use this Repository on Your Machine
 
-This introduction assumes that you have tox installed already (
-see [installation instructions](https://tox.readthedocs.io/en/latest/installation.html)) and that a `.toxbase` environment
-has been created.
-`.toxbase` is a project independent virtual environment-template for all the tox environments on your machine. If anything is weird during the tox installation or after the installation, try turning your computer off and on again before getting too frustrated.
+### Installation of Tox / Creating the tox base venv
+If you ever set up your toxbase virtual environment already, skip this first step and continue with the project-specific setup.
 
-### Powershell restrictions on Windows
-Also on new windows machines it is possible that the execution policy is set to restricted and you are not allowed execute scripts. You can find detailed information [here](https://learn.microsoft.com/de-de/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3).
+<details>
+<summary>
+ Creating the toxbase from scratch (windows)
+</summary>
 
-The quickest way to solve this problem: Open an Administrator Powershell (e.g. Windows PowerShell App)
+You can either follow the [installation instructions](https://tox.readthedocs.io/en/latest/installation.html)) and that a `.toxbase` environment has been created.
+Here we repeat the most important steps.
+
+#### Enure you are allowed to execute scripts in powershell (Windows only)
+On new Windows machines it is possible that the execution policy is set to restricted and you are not allowed execute scripts. You can find detailed information [here](https://learn.microsoft.com/de-de/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3).
+
+The quickest way to solve this problem: Open an Administrator Powershell (e.g. Windows PowerShell App, right click: 'Run as Adminstrator')
 ```ps
 Set-ExecutionPolicy -ExecutionPolicy AllSigned
 ```
-and try again (with your regular user, not as admin).
+Then close the admin powershell and continue in the regular shell.
 
-### Creating the project-specifc dev environment.
-If all problems are solved and you're ready to start: 
+#### Create the `.toxbase` environment
+`.toxbase` is a project independent virtual environment-template for all the tox environments on your machine. If anything is weird during the tox installation or after the installation, try turning your computer off and on again before getting too frustrated.
+Ask your Hochfrequenz colleagues for help.
+
+```ps
+# Change to your user directory, create tools directory if it does not exist
+$ cd C:\Users\YourUserName
+# Create a virtual environment called .toxbase
+$ python -m venv .toxbase
+```
+
+then
+```ps
+# Windows Powershell
+$ .\.toxbase\Scripts\Activate.ps1
+# XOR Windows default (e.g. cmder)
+λ .toxbase\Scripts\activate.bat
+# the virtual environment is active
+# if you see the environment name at the beginning of the line
+(.toxbase) $ python -m pip install --upgrade pip
+(.toxbase) $ pip install tox
+(.toxbase) $ tox --version
+```
+
+#### Add the toxbase interpreter to the Path environment variable
+Finally, we need to make the tox command available in all future terminal sessions.
+There are ways to achieve this goal using only the powershell commands, but we just use the "regular" way:
+
+* Type systemvariable in the search field of your windows taskbar.
+* Click on Edit system variables, then on environment variables.
+* In the next window select Path in the upper part (User variables for YourUserName) and click on edit.
+* Add a new path with `C:\Users\YourUserName\.toxbase\Scripts\`
+  * ⚠️ You have to replace YourUserName with your actual username in the path!
+     the path up to .toxbase has already been printed to the CLI in the tox --version command above
+
+* Save the settings.
+* Now you have to sign out and in again to make the changes work.
+
+You should now be able to type the following and get a reasonable answer
+```
+tox --version
+```
+in every shell, no matter if you activated the toxbase again.
+
+#### Umlaute in Paths
+Tox has an issue if you have an umlaut in your username. [This issue](https://github.com/tox-dev/tox/issues/1550#issuecomment-727824763) is well known.
+
+To solve it you have to add another environment variable `PYTHONIOENCODING` with the value `utf-8` ([source](https://github.com/tox-dev/tox/issues/1550#issuecomment-1011952057)).
+
+Start a new PowerShell session and try to run tox -e dev in your repository again. 
+
+</details>
+
+<details>
+<summary>
+ Creating the toxbase from scratch (unix)
+</summary>
+Open a terminal and execute the following commands
+
+```sh
+# Change to your user directory
+$ cd ~
+# Create a virtual environment called .toxbase
+$ python -m venv .toxbase
+```
+Now we activate the virtual environment, update pip and install tox:
+
+```
+$ source .toxbase/bin/activate
+# the virtual environment is active
+# if you see the environment name at the beginning of the line
+(.toxbase) $ python -m pip install --upgrade pip
+(.toxbase) $ pip install tox
+(.toxbase) $ tox --version
+```
+Create a new folder bin in the home directory and add a symbolic link inside
+```
+cd
+# create a `bin` directory 
+mkdir bin
+# set link to ~/bin/tox
+ln -s ~/.toxbase/bin/tox ~/bin/tox
+```
+Set the PATH variable
+
+```
+cd
+# open the config file .bashrc
+nano .bashrc
+# Go to the bottom of the file and insert
+# make tox accessible in each session from everywhere
+PATH = "${HOME}/bin:${PATH}"
+export PATH
+# save and close the file with CTRL+O and CTRL+X
+```
+#### fish
+```
+cd
+# open the config.fish file
+nano ~/.config/fish/config.fish
+# Go to the bottom of the file and insert
+# make tox accessible in each session from everywhere
+set PATH {$HOME}/bin $PATH
+# save and close the file with CTRL+O and CTRL+X
+```
+Check if everything works by opening a new terminal window and run 
+```bash
+tox --version
+```
+
+</details>
+
+### Creating the project-specific dev environment.
+If tox is set up, you're ready to start: 
    1. clone the repository, you want to work in 
    2. create the `dev` environment on your machine. To do this: 
        a) Open a Powershell

@@ -98,7 +98,7 @@ tox --version
 ```
 in every shell, no matter if you activated the toxbase again.
 
-#### Umlaute in Pathes
+#### Umlaute in Paths
 Tox has an issue if you have an umlaut in your username. [This issue](https://github.com/tox-dev/tox/issues/1550#issuecomment-727824763) is well known.
 
 To solve it you have to add another environment variable `PYTHONIOENCODING` with the value `utf-8` ([source](https://github.com/tox-dev/tox/issues/1550#issuecomment-1011952057)).
@@ -143,8 +143,8 @@ Set the PATH variable
 cd
 # open the config file .bashrc
 nano .bashrc
-# Go to the buttom of the file and insert
-# make tox accessable in each session from everywhere
+# Go to the bottom of the file and insert
+# make tox accessible in each session from everywhere
 PATH = "${HOME}/bin:${PATH}"
 export PATH
 # save and close the file with CTRL+O and CTRL+X
@@ -154,8 +154,8 @@ export PATH
 cd
 # open the config.fish file
 nano ~/.config/fish/config.fish
-# Go to the buttom of the file and insert
-# make tox accessable in each session from everywhere
+# Go to the bottom of the file and insert
+# make tox accessible in each session from everywhere
 set PATH {$HOME}/bin $PATH
 # save and close the file with CTRL+O and CTRL+X
 ```

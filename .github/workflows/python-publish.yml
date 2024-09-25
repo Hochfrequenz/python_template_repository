@@ -35,7 +35,11 @@
 
 #   build-n-publish:
 #     name: Build and publish Python 🐍 distributions 📦 to PyPI and TestPyPI
-#     runs-on: ubuntu-latest
+#     runs-on: ${{ matrix.os }}
+#     strategy:
+#       matrix:
+#         python-version: [ "3.12" ]
+#         os: [ ubuntu-latest ]
 #     # Specifying a GitHub environment, # Specifying a GitHub environment, which is strongly recommended by PyPI: https://docs.pypi.org/trusted-publishers/adding-a-publisher/
 #     # you have to create an environment in your repository settings and add the environment name here
 #     environment: release
@@ -45,7 +49,7 @@
 #     needs: tests
 #     steps:
 #       - uses: actions/checkout@v4
-#       - name: Set up Python
+#       - name: Set up Python ${{ matrix.python-version }}
 #         uses: actions/setup-python@v5
 #         with:
 #           python-version: ${{ matrix.python-version }}

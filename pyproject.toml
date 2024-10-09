@@ -15,6 +15,7 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
 dependencies = []     # add all the dependencies here
 dynamic = ["readme", "version"]
@@ -54,7 +55,7 @@ Homepage = "https://github.com/Hochfrequenz/python_template_repository"
 
 [tool.black]
 line-length = 120
-target_version = ["py311", "py312"]
+target_version = ["py311", "py312", "py313"]
 
 [tool.isort]
 line_length = 120

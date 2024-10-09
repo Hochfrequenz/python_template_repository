@@ -27,7 +27,7 @@ It doesn't contain any useful code but only a minimal working setup for a Python
   - autoresolve dev-dependencies with `tox -e compile_requirements`
   - ready-to-use publishing workflow for pypi (see readme section below)
 
-By default, it uses Python version 3.12.
+By default, it uses Python version 3.13.
 
 This repository uses a [`src`-based layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/).
 This approach has many advantages and basically means for developers, that all business logic lives in the `src` directory.

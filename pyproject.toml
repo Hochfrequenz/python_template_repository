@@ -28,7 +28,7 @@ linting = [
     "pylint==3.3.1"
 ]
 type_check = [
-    "mypy==1.12.1"
+    "mypy==1.13.0"
 ]
 spell_check = [
     "codespell==2.3.0"

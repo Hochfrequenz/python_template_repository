@@ -31,7 +31,7 @@ type_check = [
     "mypy==1.14.1"
 ]
 spell_check = [
-    "codespell==2.4.0"
+    "codespell==2.4.1"
 ]
 coverage = [
     "coverage==7.6.10"

@@ -37,7 +37,7 @@ coverage = [
     "coverage==7.11.3"
 ]
 formatting = [
-    "black==25.1.0",
+    "black==25.11.0",
     "isort==7.0.0"
 ]
 packaging = [

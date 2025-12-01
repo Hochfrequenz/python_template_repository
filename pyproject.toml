@@ -26,7 +26,7 @@ tests = [
     "pytest==9.0.1"
 ]
 linting = [
-    "pylint==4.0.3"
+    "pylint==4.0.4"
 ]
 type_check = [
     "mypy==1.19.0"

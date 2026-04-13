@@ -23,7 +23,7 @@ dynamic = ["readme", "version"]
 
 [project.optional-dependencies]
 tests = [
-    "pytest==9.0.2"
+    "pytest==9.0.3"
 ]
 linting = [
     "pylint==4.0.5"

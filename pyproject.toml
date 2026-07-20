@@ -32,7 +32,7 @@ type_check = [
     "mypy==2.3.0"
 ]
 spell_check = [
-    "codespell==2.4.2"
+    "codespell==2.4.3"
 ]
 coverage = [
     "coverage==7.15.2"

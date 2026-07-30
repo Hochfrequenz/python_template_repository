@@ -5,7 +5,7 @@ on:
     branches: [main]
   pull_request: {}
 jobs:
-  pylint:
+  lint:
     name: Python Code Quality and Lint
     runs-on: ubuntu-latest
     strategy:
@@ -13,8 +13,7 @@ jobs:
         include:
           - linter-env: linting
             commands: |
-              uv run pylint src/mypackage
-              uv run pylint unittests --rcfile=unittests/.pylintrc
+              uv run ruff check src/mypackage unittests
           - linter-env: type_check
             commands: |
               uv run mypy --show-error-codes src/mypackage --strict

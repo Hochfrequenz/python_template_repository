@@ -1,11 +1,11 @@
-# Python Template Repository including `uv` tooling, Unittests&Coverage, Pylint & MyPy Linting Actions and a PyPI Publishing Workflow
+# Python Template Repository including `uv` tooling, Unittests&Coverage, Ruff & MyPy Linting Actions and a PyPI Publishing Workflow
 
 <!--- you need to replace the `organization/repo_name` in the status badge URLs --->
 
 ![Unittests status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Unittests/badge.svg)
 ![Coverage status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Coverage/badge.svg)
 ![Linting status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Linting/badge.svg)
-![Black status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Formatting/badge.svg)
+![Ruff status badge](https://github.com/Hochfrequenz/python_template_repository/workflows/Formatting/badge.svg)
 
 This is a template repository.
 It doesn't contain any useful code but only a minimal working setup for a Python project including:
@@ -18,10 +18,8 @@ It doesn't contain any useful code but only a minimal working setup for a Python
 - ready to use **Github Actions** for
   - [pytest](https://pytest.org)
   - [code coverage measurement](https://coverage.readthedocs.io) (fails below 80% by default)
-  - [pylint](https://pylint.org/) (only accepts 10/10 code rating by default)
+  - [ruff](https://docs.astral.sh/ruff/) lint checks, code formatting and import order (replacing pylint, black and isort)
   - [mypy](https://github.com/python/mypy) (static type checks where possible)
-  - [black](https://github.com/psf/black) code formatter check
-  - [isort](https://pycqa.github.io/isort/) import order check
   - [codespell](https://github.com/codespell-project/codespell) spell check (including an ignore list)
   - dependency management and locking with [uv](https://docs.astral.sh/uv/)
   - ready-to-use publishing workflow for pypi (see readme section below)
@@ -86,7 +84,7 @@ All paths mentioned in this section are relative to the repository root.
 
 1. Open the folder with VS Code.
 2. **Select the python interpreter** ([official docs](https://code.visualstudio.com/docs/python/environments#_manually-specify-an-interpreter)) which is created by uv. Open the command pallett with `CTRL + P` and type `Python: Select Interpreter`. Select the interpreter which is placed in `.venv/Scripts/python.exe` under Windows or `.venv/bin/python` under Linux and macOS.
-3. **Set up pytest and pylint**. Therefore we open the file `.vscode/settings.json` which should be automatically generated during the interpreter setup. If it doesn't exist, create it. Insert the following lines into the settings:
+3. **Set up pytest**. Therefore we open the file `.vscode/settings.json` which should be automatically generated during the interpreter setup. If it doesn't exist, create it. Insert the following lines into the settings:
 
 ```json
 {
@@ -94,8 +92,7 @@ All paths mentioned in this section are relative to the repository root.
   "python.testing.nosetestsEnabled": false,
   "python.testing.pytestEnabled": true,
   "pythonTestExplorer.testFramework": "pytest",
-  "python.testing.pytestArgs": ["unittests"],
-  "python.linting.pylintEnabled": true
+  "python.testing.pytestArgs": ["unittests"]
 }
 ```
 

@@ -5,7 +5,7 @@ on:
     branches: [main]
   pull_request: {}
 jobs:
-  pylint:
+  lint:
     name: Python Code Quality and Lint
     runs-on: ubuntu-latest
     strategy:

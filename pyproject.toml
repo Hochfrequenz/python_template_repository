@@ -27,7 +27,7 @@ Homepage = "https://github.com/Hochfrequenz/python_template_repository"
 
 [dependency-groups]
 tests = ["pytest==9.1.1"]
-linting = [{ include-group = "tests" }, "ruff==0.16.0"]
+linting = [{ include-group = "tests" }, "ruff==0.16.1"]
 type_check = [{ include-group = "tests" }, "mypy==2.3.0"]
 spell_check = ["codespell==2.4.3"]
 coverage = [{ include-group = "tests" }, "coverage==7.15.2"]

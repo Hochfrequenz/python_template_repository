@@ -62,9 +62,6 @@ ignore = [
     "PLR2004", # magic-value-comparison
 ]
 
-[mypy]
-truethy-bool = true
-
 [tool.mypy]
 disable_error_code = []
 

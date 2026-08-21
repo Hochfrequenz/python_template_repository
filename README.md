@@ -124,6 +124,10 @@ It just requires some manual adjustments/settings depending on your project:
 1. Fill out the metadata in the [`pyproject.toml`](pyproject.toml); Namely the package name and the `dependencies` list.
 2. Uncomment the lines in [`.github/workflows/python-publish.yml`](.github/workflows/python-publish.yml)
 3. Create a [new environment in your GitHub repository](https://github.com/Hochfrequenz/python_template_repository/settings/environments) and call it `release`.
+   If you restrict that environment's deployment branches, you **must** add a rule of type *Tag* matching `v*`.
+   A release event deploys from the tag (`refs/tags/v1.2.3`), not from a branch, so an environment that only
+   allows the `main` branch rejects every publish - and the job then fails having run no steps at all, which
+   gives you nothing to debug from.
 4. Set up a new trusted publisher [in your PYPI account](https://pypi.org/manage/account/publishing/).
    1. PyPI Project Name: The name which you defined in the `pyproject.toml` is the name of the project which you have to enter here.
    2. Owner: The GitHub organization name or GitHub username that owns the repository

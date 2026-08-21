@@ -30,7 +30,7 @@ tests = ["pytest==9.1.1"]
 linting = [{ include-group = "tests" }, "ruff==0.16.0"]
 type_check = [{ include-group = "tests" }, "mypy==2.3.0"]
 spell_check = ["codespell==2.4.3"]
-coverage = [{ include-group = "tests" }, "coverage==7.15.2"]
+coverage = [{ include-group = "tests" }, "coverage==7.15.4"]
 # build/twine are only needed to build & publish this package to PyPI, not by users installing it, so they live
 # here rather than as a pip-installable extra.
 packaging = ["build==1.5.0", "twine==7.0.0"]

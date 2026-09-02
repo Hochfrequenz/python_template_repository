@@ -6,7 +6,11 @@ on:
   pull_request: {}
 jobs:
   lint:
-    name: Python Code Quality and Lint
+    # the name must not depend on the commands below: repositories built from this template use it as a
+    # required status check in their branch ruleset, and GitHub would otherwise append the whole command
+    # string - so renaming the package, or any edit to a lint invocation, silently makes the required
+    # check unreportable and blocks every pull request
+    name: "Python Code Quality and Lint (${{ matrix.linter-env }})"
     runs-on: ubuntu-latest
     strategy:
       matrix:

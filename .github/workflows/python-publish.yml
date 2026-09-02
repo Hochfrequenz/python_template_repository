@@ -17,7 +17,7 @@
 #     runs-on: ${{ matrix.os }}
 #     strategy:
 #       matrix:
-#         python-version: ["3.13"]
+#         python-version: ["3.14"]
 #         os: [ubuntu-latest]
 #     steps:
 #       - uses: actions/checkout@v4
@@ -35,7 +35,7 @@
 #     runs-on: ${{ matrix.os }}
 #     strategy:
 #       matrix:
-#         python-version: [ "3.12" ]
+#         python-version: [ "3.14" ]
 #         os: [ ubuntu-latest ]
 #     # Specifying a GitHub environment, # Specifying a GitHub environment, which is strongly recommended by PyPI: https://docs.pypi.org/trusted-publishers/adding-a-publisher/
 #     # you have to create an environment in your repository settings and add the environment name here

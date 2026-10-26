@@ -12,7 +12,7 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v10.3.2
         with:
-          python-version: "3.14"
+          python-version: "3.15"
       - name: Install dependencies
         run: uv sync --group packaging
       - name: Run Packaging Test

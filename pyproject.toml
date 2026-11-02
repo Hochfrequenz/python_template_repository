@@ -27,7 +27,7 @@ Changelog = "https://github.com/Hochfrequenz/python_template_repository/releases
 Homepage = "https://github.com/Hochfrequenz/python_template_repository"
 
 [dependency-groups]
-tests = ["pytest==9.1.1"]
+tests = ["pytest==9.2.0"]
 linting = [{ include-group = "tests" }, "ruff==0.17.2"]
 type_check = [{ include-group = "tests" }, "mypy==2.4.0"]
 spell_check = ["codespell==2.4.3"]
